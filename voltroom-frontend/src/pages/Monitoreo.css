@@ -1,0 +1,261 @@
+/* ========== MODERN GLASSMORPHISM MONITOREO ========== */
+
+.monitoreo-container {
+    padding: 1.5rem;
+    min-height: 100vh;
+    color: #2d3436;
+    background: transparent;
+}
+
+.monitoreo-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.monitoreo-header h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Status Bar */
+.telemetria-status-bar {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    color: #334155;
+}
+
+.pulse-dot {
+    background: #ff7675;
+    box-shadow: 0 0 10px rgba(255, 118, 117, 0.6);
+    animation: pulse-live 2s infinite;
+}
+
+/* Sectioning */
+.inmueble-header {
+    background: #ffffff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #6c5ce7;
+}
+
+.inmueble-title {
+    color: #2d3436;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.inmueble-count {
+    background: rgba(108, 92, 231, 0.1);
+    color: #6c5ce7;
+    border: 1px solid rgba(108, 92, 231, 0.2);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+}
+
+/* Grid Layout */
+.monitoreo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+}
+
+/* Card Styling */
+.sensor-monitor-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.sensor-monitor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(108, 92, 231, 0.15);
+    border-color: #a29bfe;
+}
+
+.card-header-main {
+    padding: 0.85rem 1rem;
+    background: rgba(108, 92, 231, 0.03);
+    border-bottom: 1px solid rgba(108, 92, 231, 0.1);
+}
+
+.sensor-id-label {
+    color: #6c5ce7;
+    font-size: 0.95rem;
+    font-weight: 800;
+}
+
+/* Visualizer - Radar Mode */
+.telemetria-visual {
+    height: 110px;
+    background: #f8f9fa; 
+    position: relative;
+    border-bottom: 1px solid rgba(108, 92, 231, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.75rem;
+}
+
+.radar-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #00ff00;
+    position: relative;
+    overflow: hidden;
+    background: #001a00;
+    box-shadow: inset 0 0 15px rgba(0, 255, 0, 0.4), 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.radar-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 255, 0, 0.4);
+}
+
+.radar-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: rgba(0, 255, 0, 0.4);
+}
+
+/* Add concentric circles for more submarine feel */
+.radar-container .radar-rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 1px dashed rgba(0, 255, 0, 0.3);
+}
+
+.radar-sweep {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 65%, rgba(0, 255, 0, 0.7) 100%);
+    animation: radar-spin 2s linear infinite;
+}
+
+.radar-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ff00, 0 0 15px #00ff00;
+    z-index: 10;
+}
+
+@keyframes radar-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.visual-power-display .power-value {
+    font-size: 2.2rem;
+    color: #2d3436;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+}
+
+/* Data Grid */
+.telemetria-display {
+    padding: 1rem;
+    background: transparent;
+}
+
+.data-label {
+    color: #636e72;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.data-value {
+    color: #2d3436;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.level-bar {
+    background: #eef2ff;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 8px;
+    margin-top: 4px;
+}
+
+.level-bar-fill {
+    background: linear-gradient(90deg, #a29bfe, #6c5ce7);
+    border-radius: 6px;
+    height: 100%;
+}
+
+/* Footer Mini */
+.card-footer-mini {
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-top: 1px solid rgba(108, 92, 231, 0.1);
+    font-size: 0.8rem;
+    color: #636e72;
+}
+
+.footer-item strong {
+    color: #2d3436;
+}
+
+/* Detailed Table */
+.telemetria-detail-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.table-telemetria {
+    margin-bottom: 0;
+}
+
+.table-telemetria th {
+    background: rgba(108, 92, 231, 0.05);
+    color: #6c5ce7;
+    border-bottom: 1px solid rgba(108, 92, 231, 0.1);
+}
+
+.table-telemetria td {
+    color: #2d3436;
+    border-bottom: 1px solid rgba(108, 92, 231, 0.05);
+}

@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --bg-deep: #f1f2f7; /* Main content background from Perfect Admin */
+  --bg-panel: #2a3542; /* Sidebar dark background */
+  --bg-card: #ffffff;
+  --text-primary: #333333; /* Dark text */
+  --text-secondary: #797979;
+  
+  /* Perfect Admin Chart/Card Colors */
+  --accent-red: #ff6c60; /* Coral/Red */
+  --accent-teal: #57c8f2; /* Teal/Blue */
+  --accent-orange: #f8d347; /* Yellow/Orange */
+  --accent-green: #a9d86e; /* Green */
+  
+  --accent-blue: #428bca; /* Corporate blue */
+}
+
+body {
+  background: var(--bg-deep);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-primary);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #333333;
+}
+
+/* Layout Wrappers */
+.dashboard-container {
+    padding: 1.5rem;
+    min-height: 100vh;
+    color: var(--text-primary);
+}
+
+/* Scrollbar Global */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f2f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #cdd2d2;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aab2b2;
+}
+
+.page-container {
+  padding-bottom: 60px;
+}
+
+/* Common UI adjustments for Clean Light Theme */
+.card {
+  background: #ffffff;
+  border: none;
+  border-radius: 4px;
+  color: #797979;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.table {
+  color: #797979;
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background: #ffffff;
+  border-bottom: 2px solid #e2e2e4;
+  color: #333333;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 12px 10px;
+}
+
+.table td {
+  border-bottom: 1px solid #f1f2f7;
+  vertical-align: middle;
+  padding: 12px 10px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #797979;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* ========================================================
+   RADICAL FORM CONTROLS (Minimalist Underline Style)
+   ======================================================== */
+.form-control, .form-select {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #d1d5db;
+  color: #333333;
+  border-radius: 0;
+  padding: 0.8rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none !important;
+}
+
+.form-control:focus, .form-select:focus {
+  background: transparent;
+  border-bottom: 2px solid var(--accent-red); /* Radical accent color */
+  color: #111827;
+  outline: none;
+  box-shadow: none;
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+  font-weight: 300;
+}
+
+.form-label {
+  color: var(--accent-red);
+  font-weight: 800;
+  font-size: 0.75rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: block;
+}
+
+/* ========================================================
+   RADICAL BUTTONS (Pill shape + Floating Shadows)
+   ======================================================== */
+.btn {
+  border-radius: 50px; /* Radical pill shape */
+  padding: 0.75rem 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-size: 0.85rem;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-sm {
+  padding: 0.4rem 1rem !important;
+  font-size: 0.75rem !important;
+  border-radius: 50px !important;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #2968a3 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(66, 139, 202, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3276b1 0%, #1f5080 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(66, 139, 202, 0.4);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #f1f2f7;
+  color: #333333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.btn-secondary:hover {
+  background: #e2e2e4;
+  color: #333333;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--accent-green) 0%, #8bc550 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(169, 216, 110, 0.3);
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #8ec355 0%, #76a742 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(169, 216, 110, 0.4);
+  color: #ffffff;
+}
+
+.page-title {
+  font-weight: 400;
+  color: #333333;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  text-shadow: none;
+}
+
+.page-subtitle {
+  color: #797979;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.stat-card {
+  color: white;
+  border-radius: 4px;
+  padding: 20px;
+  min-height: 120px;
+  box-shadow: none;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.badge-soft {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
