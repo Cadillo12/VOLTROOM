@@ -2,7 +2,8 @@
 
 .login-container {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     font-family: 'Poppins', sans-serif;
     background-color: #f1f2f7; /* Matching system background */
 }
@@ -90,9 +91,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 20px;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 /* Adding the corner circle on the right panel as seen in the image */
@@ -117,7 +118,7 @@
 .form-wrapper {
     background: white;
     border-radius: 12px;
-    padding: 30px;
+    padding: 25px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.05); /* subtle shadow to pop slightly over the corner circle */
 }
 
@@ -131,12 +132,12 @@
 .right-content .subtitle {
     color: #797979; /* System text secondary */
     font-size: 0.85rem;
-    margin: 10px 0 35px;
+    margin: 5px 0 20px;
 }
 
 .input-group-modern {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     background: #f3f4f6; /* Matching image field background */
@@ -155,7 +156,7 @@
     flex: 1;
     border: none;
     background: transparent;
-    padding: 16px 0;
+    padding: 12px 0;
     font-size: 0.95rem;
     color: #333;
     outline: none;
@@ -179,7 +180,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 0.85rem;
 }
 
@@ -202,7 +203,7 @@
     background: #428bca; /* System accent blue */
     color: white;
     border: none;
-    padding: 16px;
+    padding: 12px;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
@@ -219,7 +220,7 @@
     display: flex;
     align-items: center;
     text-align: center;
-    margin: 25px 0;
+    margin: 15px 0;
     color: #999;
     font-size: 0.85rem;
 }
@@ -239,7 +240,7 @@
     background: white;
     color: #333;
     border: 1px solid #333;
-    padding: 16px;
+    padding: 12px;
     border-radius: 8px;
     font-size: 1rem;
     font-weight: 600;
@@ -254,7 +255,7 @@
 
 .signup-link {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 15px;
     font-size: 0.85rem;
     color: #666;
 }

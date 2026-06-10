@@ -113,7 +113,7 @@ export default function LoginPage() {
                 <div className="right-content">
                     {isLogin ? (
                         <div className="form-wrapper">
-                            <h2>Sign in</h2>
+                            <h2>Iniciar Sesión</h2>
                             <p className="subtitle">Ingresa tus credenciales para acceder a tu panel de control.</p>
 
                             <form onSubmit={handleLoginSubmit}>
@@ -124,7 +124,7 @@ export default function LoginPage() {
                                     <input
                                         type="email"
                                         name="email"
-                                        placeholder="User Name"
+                                        placeholder="Correo Electrónico"
                                         value={loginForm.email}
                                         onChange={handleLoginChange}
                                         required
@@ -144,15 +144,15 @@ export default function LoginPage() {
                                         required
                                     />
                                     <span className="show-pwd" onClick={() => setShowPassword(!showPassword)}>
-                                        {showPassword ? "HIDE" : "SHOW"}
+                                        {showPassword ? "OCULTAR" : "VER"}
                                     </span>
                                 </div>
 
                                 <div className="form-actions">
                                     <label className="remember">
-                                        <input type="checkbox" /> Remember me
+                                        <input type="checkbox" /> Recuerdame
                                     </label>
-                                    <a href="#" className="forgot" onClick={(e) => e.preventDefault()}>Forgot Password?</a>
+                                    <a href="#" className="forgot" onClick={(e) => e.preventDefault()}>¿Olvidaste tu contraseña?</a>
                                 </div>
 
                                 <button type="submit" className="btn-sign-in" disabled={isLoading}>
@@ -163,23 +163,23 @@ export default function LoginPage() {
                                             </svg>
                                             Procesando...
                                         </span>
-                                    ) : "Sign in"}
+                                    ) : "INICIAR SESIÓN"}
                                 </button>
 
                                 <div className="divider">
-                                    <span>Or</span>
+                                    <span>O</span>
                                 </div>
 
                                 <button type="button" className="btn-sign-other">
-                                    Sign in with other
+                                    Inicia Sesión con Otras Plataformas
                                 </button>
 
-                                <p className="signup-link">Don't have an account? <a href="#" onClick={(e) => { e.preventDefault(); setIsLogin(false); }}>Sign Up</a></p>
+                                <p className="signup-link">¿No tienes una cuenta? <a href="#" onClick={(e) => { e.preventDefault(); setIsLogin(false); }}>Registrarse</a></p>
                             </form>
                         </div>
                     ) : (
                         <div className="form-wrapper">
-                            <h2>Sign Up</h2>
+                            <h2>Registrarse</h2>
                             <p className="subtitle">Crea una cuenta para empezar a monitorear.</p>
 
                             <form onSubmit={handleRegisterSubmit}>
@@ -233,7 +233,7 @@ export default function LoginPage() {
                                         required
                                     />
                                     <span className="show-pwd" onClick={() => setShowPassword(!showPassword)}>
-                                        {showPassword ? "HIDE" : "SHOW"}
+                                        {showPassword ? "OCULTAR" : "VER"}
                                     </span>
                                 </div>
 
@@ -256,10 +256,10 @@ export default function LoginPage() {
                                             </svg>
                                             Procesando...
                                         </span>
-                                    ) : "Sign Up"}
+                                    ) : "Registrarse"}
                                 </button>
 
-                                <p className="signup-link">Already have an account? <a href="#" onClick={(e) => { e.preventDefault(); setIsLogin(true); }}>Sign in</a></p>
+                                <p className="signup-link">¿Ya tienes una cuenta? <a href="#" onClick={(e) => { e.preventDefault(); setIsLogin(true); }}>Inicia Sesión</a></p>
                             </form>
                         </div>
                     )}
